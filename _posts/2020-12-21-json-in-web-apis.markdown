@@ -130,7 +130,7 @@ A *breaking* change could be something like this (email replaced with 2 new fiel
 In [semantic versioning][semantic versioning] the *incremental change* would be a *MINOR* release and the *breaking change* would be a *MAJOR* release (MAJOR.MINOR.PATCH).
 
 
-To ensure that the api user doesn't have to recompile their code whenever you publish a *MINOR* release make sure to define your messages with the `additionalProperties:true` property. This way the user will be aware that new json properties might be added in the future and upgrade at it's own pace.
+To ensure that the api users don't have to recompile their code whenever you publish a *MINOR* release make sure to define your messages with the `additionalProperties:true` property. This way the user will be aware that new json properties might be added in the future and upgrade at it's own pace.
 
 
 Let's go back to the previous OpenAPI example and make an incremental change in the Email message types.
