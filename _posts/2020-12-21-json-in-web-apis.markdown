@@ -7,7 +7,7 @@ categories: json json-schema api swagger openapi
 [Json][json] has become the default message format for any new web api. It's simple enough to just start coding and it does not require a schema which is handy while exploring ideas. But a time comes when the web api becomes accessible to users and they need to know what to send. The backend service should also be able to distinguish between valid and invalid messages. Here are some ideas how to approach this.
 
 # JSON schema
-There is a [json schema][json schema] enhancement available for defining rules for validating json messages similarly like in xml. A sample schema looks like this:
+There is a [json schema][json schema] enhancement available for defining json syntax rules similarly like in xml. A sample schema looks like this:
 {% highlight json %}
 {
   "$id": "https://example.com/email.schema.json",
@@ -200,9 +200,7 @@ V1.1.0 Response:
 }
 {% endhighlight %}
 
-As mentioned earlier in OpenAPI additional properties are allowed by default. This means that
-- the v1.1.0 response is compliant with the api v1.0.0,
-- the v1.0.0 request is compliant with api v1.1.0.
+As mentioned earlier in OpenAPI additional properties are allowed by default. This means that the v1.1.0 response is compliant with the api v1.0.0. On the other side: because `topic` is optional the v1.0.0 request is compliant with api v1.1.0.
 
 If the `topic` property becomes required in v1.1.0 then the requests coming from v1.0.0 user will no longer be compliant with v1.1.0. An obligatory property will be missing.
 
@@ -220,7 +218,7 @@ There are at least 2 possible ways of handling multiple api versions:
 
 **Option 1** is a 'brute force' approach. It will probably mean that 2 code bases will modify the same database which needs to be handled with caution. Besides this (and a bigger infrastructure bill) it's pretty straightforward. There are 2 api versions available: `current` and `new` one. The users need to migrate to the `new` version and when they do the `old` is shutdown.
 
-Personally I've seen option 1 used only in big companies IT backyards. *(Well quite often I've also seen an alternative strategy where the api version is changed with all it's users at once without any transition period but with a couple hours downtime on all involved software. Mostly on weekends. Mostly on internal (not customer facing) software. If after update one component failed then all the others were rollbacked as well.)*
+Personally I've seen option 1 used only in big companies with controlled environments. *(Well quite often I've also seen an alternative strategy where the api version is changed with all it's users at once without any transition period but with a couple hours downtime on all involved software. Mostly on weekends. Mostly on internal (not customer facing) software. If after update one component failed then all the others were rollbacked as well.)*
 
 If you're dealing with b2b partners that use your api or some mobile apps then the prospects of the user updating to a newer api version are slim.
 
