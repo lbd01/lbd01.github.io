@@ -22,9 +22,13 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lbd01_
 github_username:  lbd01
 
+author:
+  email: "lbd01@protonmail.com"
+
 # Build settings
 markdown: kramdown
 theme: minima
+#theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
 
@@ -39,3 +43,9 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+minima:
+  skin: dark
+  social_links:
+    twitter: lbd01_
+    github: lbd01

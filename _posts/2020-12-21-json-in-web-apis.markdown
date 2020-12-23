@@ -2,7 +2,7 @@
 layout: post
 title:  "JSON in web apis - a practical guide"
 date:   2020-12-21 12:51:15 +0100
-categories: json json-schema api swagger openapi
+categories: 
 ---
 [Json][json] has become the default message format for any new web api. It's simple enough to just start coding and it does not require a schema which is handy while exploring ideas. But a time comes when the web api becomes accessible to users and they need to know what to send. The backend service should also be able to distinguish between valid and invalid messages. Here are some ideas how to approach this.
 
