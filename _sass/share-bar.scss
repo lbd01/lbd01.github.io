@@ -1,0 +1,53 @@
+/* Based on https://mycyberuniverse.com/social-media-share-bar-jekyll-blog-website.html */  
+  
+/* Share Bar */
+#share-bar {
+    font-size: 20px;
+}
+
+/* Title */
+#share-bar h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* All buttons */
+.share-buttons a:hover{
+	text-decoration:none;
+}
+
+/* Each button */
+.share-button {
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-right: 3px;
+    border: 1px solid #D3D6D2;
+    padding: 5px 10px 5px 10px;
+    color: #ffffff;
+	display: inline-block;
+}
+
+/* Facebook button */
+.fa-facebook-official {
+    background-color: #3b5998;
+}
+
+/* Twitter button */
+.fa-twitter {
+    background-color: #55acee;
+}
+
+/* Reddit button */
+.fa-reddit-alien {
+    background-color: #ff4500;
+}
+
+/* LinkedIn button */
+.fa-linkedin {
+    background-color: #007bb5;
+}
+
+/* Email button */
+.fa-envelope {
+    background-color: #444444;
+}
