@@ -18,7 +18,7 @@ email: lbd01@protonmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A web technologies blog.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lbd01.net" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lbd01_
 github_username:  lbd01
 
